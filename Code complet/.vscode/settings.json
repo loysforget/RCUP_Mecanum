@@ -1,0 +1,5 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "cmake.sourceDirectory": "${workspaceFolder}/Tracking_camera/c++/librealsense-master"
+}
