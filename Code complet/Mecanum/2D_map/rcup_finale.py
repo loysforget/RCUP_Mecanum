@@ -377,8 +377,7 @@ def run(grid_size, robot_radius, show_animation, move_robot, ArduinoSerialPort, 
                     '''
                     #-----Bloc 3.2--------------------------------------------------
                     Obstacle  = ObstacleProche()
-                          
-                       
+            
                     if(Obstacle):   
                         if (flag==0):                              #faire 4 pas avant de reverifier s'il y a un nouveau obstacle
                             print("obstacle proche !!")
@@ -398,7 +397,6 @@ def run(grid_size, robot_radius, show_animation, move_robot, ArduinoSerialPort, 
                             print("flag == 4")
                             flag = 0
 
-
                     #-----Bloc 3.3--------------------------------------------------     
                     angle_orientation_str = str(angle_orientation)  #---_tmp
 
@@ -413,7 +411,6 @@ def run(grid_size, robot_radius, show_animation, move_robot, ArduinoSerialPort, 
                         else:
                             time.sleep(3.5)
                             #break
-
                     rx_old = rx_new
                     ry_old = ry_new
 

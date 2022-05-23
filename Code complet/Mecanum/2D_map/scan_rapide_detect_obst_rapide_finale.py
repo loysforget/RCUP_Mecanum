@@ -253,12 +253,7 @@ def update_map(pipe, angle =0):
 
     obx =[]
     oby =[]
-    """
-    if (angle<0):
-        angle = -angle
-    elif(angle>0):
-        angle = 360 - angle
-    """
+
     for i in range(2):
             print(i)
             current_data= rp.get_data()
@@ -436,17 +431,6 @@ def main():
                         angle_orientation = 180
 
                     '''
-                    if (angle_orientation> 0):
-                        angle_orientation_tmp = angle_orientation + imprecision_angle
-                    elif (angle_orientation < 0 ):
-                        angle_orientation_tmp = angle_orientation - imprecision_angle
-                    #elif(angle_orientation == 0):
-                     #   angle_orientation_tmp = - imprecision_angle
-                    else:
-                        angle_orientation_tmp = angle_orientation
-                    '''
-
-                    '''
                     Ajouter une fonction qui arrete le robot si un obstacle est proche
                     dans ce cas on reexecute la boucle while
                     '''
@@ -457,7 +441,7 @@ def main():
                     if(Obstacle):   
                         if (flag==0):                              #faire 4 pas avant de reverifier s'il y a un nouveau obstacle
                             print("obstacle proche !!")
-                            write_read("4M0W", arduino)
+                            #write_read("4M0W", arduino)
                             flag = 1
                             #angle_orientation_str = str(angle_orientation_tmp)
                             #write_read(angle_orientation_str + "zAt", arduino)
@@ -475,10 +459,6 @@ def main():
                         elif(flag==4):
                             print("flag == 4")
                             flag = 0
-
-
-                    #if (m==3 or ((m==2 and len(rx) ==2) or (m==1 and len(rx) ==1))):
-                       # break
 
                     #-----Bloc 3.3--------------------------------------------------     
                     angle_orientation_str = str(angle_orientation)  #---_tmp
