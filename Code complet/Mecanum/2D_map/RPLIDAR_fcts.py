@@ -10,7 +10,7 @@ def get_data():
         output:
             scan: list (a revoir)
     """
-    lidar = RPLidar('COM4') #Faut spécifier le port auquel est connecter le Lidar ici
+    lidar = RPLidar('COM5') #Faut spécifier le port auquel est connecter le Lidar ici
     lidar.motor_speed = rplidar.MAX_MOTOR_PWM
     for scan in lidar.iter_scans(min_len=100, max_buf_meas=False):
         break
